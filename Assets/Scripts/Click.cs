@@ -18,7 +18,7 @@ public class Click : MonoBehaviour
 
     public void ClickStop()
     {
-        Debug.Log("Da bam");
+        //Debug.Log("Da bam");
         Game.nearestToCar(Game.instance.car);
     }
 }
