@@ -87,13 +87,13 @@ public class Game : MonoBehaviour
         if (score > 10)
         {
             SpawnPlane.movingSpeed = 9f;
-            CarMove.instance.speed = 6f;
+            CarMove.instance.speed = 7f;
         }
 
         if (score > 50)
         {
-            SpawnPlane.movingSpeed = 10f;
-            CarMove.instance.speed = 8f;
+            SpawnPlane.movingSpeed = 10.5f;
+            CarMove.instance.speed = 9f;
         }
     }
 
