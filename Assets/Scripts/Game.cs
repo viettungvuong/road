@@ -44,12 +44,12 @@ public class Game : MonoBehaviour
             plane.SetActive(true);
         startPanel.SetActive(false);
     }
-    bool inCameraRange(aPlane aplane)
+    static bool inCameraRange(aPlane aplane)
     {
         return (aplane.gameObject.GetComponent<Renderer>().isVisible);
     }
 
-    void nearestToCar(GameObject car)
+    public static void nearestToCar(GameObject car)
     {
         if (SpawnPlane.movingPlanes.Count>0&&inCameraRange(SpawnPlane.movingPlanes[0]))
         {
@@ -61,7 +61,7 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0&& Input.GetTouch(0).phase == TouchPhase.Began)
+        /*if (Input.touchCount > 0&& Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit = new RaycastHit();
@@ -73,7 +73,7 @@ public class Game : MonoBehaviour
                     nearestToCar(car);
                 }
             }
-        }
+        }*/
     }
 
     public void incrementScore()
