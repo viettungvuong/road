@@ -86,14 +86,69 @@ public class Game : MonoBehaviour
         changeSkbyox();
         if (score > 10)
         {
-            SpawnPlane.movingSpeed = 9f;
+            SpawnPlane.movingSpeed = 6f;
             CarMove.instance.speed = 7f;
+            SpawnPlane.upperLimit = 8;
         }
-
+        if (score > 20)
+        {
+            SpawnPlane.movingSpeed = 7f;
+            CarMove.instance.speed = 8f;
+            SpawnPlane.upperLimit = 7;
+        }
         if (score > 50)
         {
-            SpawnPlane.movingSpeed = 10.5f;
+            SpawnPlane.movingSpeed = 7f;
             CarMove.instance.speed = 9f;
+            SpawnPlane.upperLimit = 7;
+        }
+        if (score > 80)
+        {
+            SpawnPlane.movingSpeed = 7.5f;
+            CarMove.instance.speed = 9f;
+            SpawnPlane.upperLimit = 7;
+        }
+        if (score > 100)
+        {
+            SpawnPlane.movingSpeed = 8f;
+            CarMove.instance.speed = 9f;
+            SpawnPlane.upperLimit = 7;
+        }
+        if (score > 200)
+        {
+            SpawnPlane.movingSpeed = 9f;
+            CarMove.instance.speed = 9.5f;
+            SpawnPlane.upperLimit = 6;
+        }
+        if (score > 300)
+        {
+            SpawnPlane.movingSpeed = 9f;
+            CarMove.instance.speed = 9.5f;
+            SpawnPlane.upperLimit = 7;
+        }
+        if (score > 500)
+        {
+            SpawnPlane.movingSpeed = 10f;
+            CarMove.instance.speed = 10f;
+            SpawnPlane.upperLimit = 6;
+        }
+        if (score > 800)
+        {
+            SpawnPlane.movingSpeed = 11f;
+            CarMove.instance.speed = 11f;
+            SpawnPlane.upperLimit = 5;
+        }
+        if (score > 1000)
+        {
+            SpawnPlane.movingSpeed = 12f;
+            CarMove.instance.speed = 12f;
+            SpawnPlane.upperLimit = 5;
+        }
+        if (score > 2000)
+        {
+            SpawnPlane.movingSpeed = 14f;
+            CarMove.instance.speed = 14f;
+            SpawnPlane.upperLimit = 5;
         }
     }
 

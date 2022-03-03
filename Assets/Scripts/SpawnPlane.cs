@@ -20,9 +20,11 @@ public class SpawnPlane : MonoBehaviour
     public static List<aPlane> movingPlanes;
     static bool moving;
     public static float movingSpeed;
+    public static int upperLimit;
     private void Awake()
     {
-        movingSpeed = 7f;
+        upperLimit = 7;
+        movingSpeed = 6f;
         moving = false;
         movingPlanes = new List<aPlane>();
         instance = this;
@@ -74,7 +76,7 @@ public class SpawnPlane : MonoBehaviour
         if (!moving)
         {
             int rand = Random.Range(0, 10);
-            if (0<=rand&&rand<=7)
+            if (0<=rand&&rand<=upperLimit)
             {
                 obj = spawnMoving();
                 plane.movingPlane = true;
