@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -17,7 +17,7 @@ public class Game : MonoBehaviour
     public static Game instance;
     private void Awake()
     {
-        started = false;
+        started = false; //kiem tra bam start hay chua
         instance = this;
     }
     void Start()
@@ -31,7 +31,7 @@ public class Game : MonoBehaviour
         foreach (GameObject plane in planes)
             plane.SetActive(false);
         gameOverPanel.SetActive(false);
-        tmp=scoreText.GetComponent<TextMeshProUGUI>();
+        tmp=scoreText.transform.GetChild(0).GetComponent<TextMeshProUGUI>(); //lay cai component diem
         tmp2 = highScore.GetComponent<TextMeshProUGUI>();
     }
     public void startBtn()
