@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -73,7 +73,7 @@ public class SpawnPlane : MonoBehaviour
     {
         aPlane plane = new aPlane();
         GameObject obj=null;
-        if (!moving)
+        if (!moving) //neu phia trc da la mot moving plane thi chac chan cai hien tai phai la static, bien moving nay kiem soat dieu do
         {
             int rand = Random.Range(0, 10);
             if (0<=rand&&rand<=upperLimit)
